@@ -37,3 +37,24 @@ SELECT post
 FROM staff
 GROUP BY post
 HAVING AVG(age) <30;
+
+#Внутри каждой должности вывести ТОП-2 по ЗП (2 самых высокооплачиваемых сотрудника по ЗП внутри каждой должности)
+SELECT * FROM staff
+where post= "Начальник"
+ORDER BY salary DESC
+LIMIT 2
+
+SELECT * FROM staff
+where post="Инженер"
+ORDER BY salary DESC
+LIMIT 2
+
+SELECT * FROM staff
+where post="Рабочий"
+ORDER BY salary DESC
+LIMIT 2
+
+SELECT * FROM staff
+where post="Уборщик"
+ORDER BY salary DESC
+LIMIT 2
